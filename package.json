@@ -1,0 +1,22 @@
+{
+  "name": "empire_co_api",
+  "version": "1.0.0",
+  "description": "Using the MEN in MEAN stack",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awanderlyss/empire_co_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awanderlyss/empire_co_api/issues"
+  },
+  "homepage": "https://github.com/awanderlyss/empire_co_api#readme"
+}
