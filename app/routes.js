@@ -52,6 +52,13 @@ module.exports = function(app) {
           res.redirect(`/products/${product.title}`);
         })
         .catch((err) => { if(err) console.log(err); });
+    })
+
+    // destroy
+    .delete(function(req, res) {
+      Product.findOneAndRemove({name: req.params.title})
+        .then((product) => { res.redirect('/products'); })
+        .catch((err) => { if(err) console.log(err); });
     });
 
     // register routes
