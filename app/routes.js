@@ -29,10 +29,19 @@ module.exports = function(app) {
         .catch((err) => { if(err) console.log(err); });
     })
 
-  // index
+    // index
     .get(function(req, res) {
       Product.find({})
         .then((products) => { res.json(products); })
+        .catch((err) => { if(err) console.log(err); });
+    });
+
+  apiRouter.route('/products/:product_title')
+
+    // show
+    .get(function(req, res) {
+      Product.findOne({title: req.params.product_title})
+        .then((product) => { res.json(product); })
         .catch((err) => { if(err) console.log(err); });
     });
 
