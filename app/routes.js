@@ -21,6 +21,14 @@ module.exports = function(app) {
   // routes for api start here =============================
   apiRouter.route('/products')
 
+    // create
+    .post(function(req, res) {
+      // code here
+      Product.create(req.body.product)
+        .then((product) => { res.json(product); })
+        .catch((err) => { if(err) console.log(err); });
+    })
+
   // index
     .get(function(req, res) {
       Product.find({})
