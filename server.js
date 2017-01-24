@@ -4,7 +4,7 @@ var app            = express();
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 
-// config ===========================================
+// config ==================================================
 var port = process.env.PORT || 8080; // set our port
 
 // connecting to mongodb
