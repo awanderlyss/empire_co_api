@@ -1,5 +1,5 @@
 # EMPIRE CO API (back-end)
-Using the MEN in MEAN stack 
+Using the MEN in MEAN stack
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -31,12 +31,6 @@ OS X & Linux:
 
 ```sh
 npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
 ```
 
 ## Development setup

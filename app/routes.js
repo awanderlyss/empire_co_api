@@ -1,24 +1,24 @@
 // modules =================================================
-var express = require('express');
+var express   = require('express');
+var Product   = require('./models/product');// fetching the product model
+var apiRouter = express.Router();
 
-var Product = require('./models/product');// fetching the product model
-
-var apiRouter     = express.Router();
-var welcomeRouter = express.Router();
 
 module.exports = function(app) {
   // console logs when the api is being used
   apiRouter.use(function(req, res, next) {
     console.log("Something is happening");
-    next();
+    next(); // make sure we go to the next routes and don't stop here
   });
 
-  // welcome screen (test route)
+  // test route to make sure everything is working
   apiRouter.get('/', function(req, res) {
     res.json({ message: 'WELCOME TO THE EMPIRE CO API!' });
   });
 
   // routes for api start here =============================
+
+  // on routes that end in /products
   apiRouter.route('/products')
 
     // create
@@ -36,32 +36,33 @@ module.exports = function(app) {
         .catch((err) => { if(err) console.log(err); });
     });
 
-  apiRouter.route('/products/:title')
+  // on routes that end in /products/:title
+  apiRouter.route('/products/:id')
 
     // show
     .get(function(req, res) {
-      Product.findOne({title: req.params.title})
+      Product.findById(req.params.id)
         .then((product) => { res.json(product); })
         .catch((err) => { if(err) console.log(err); });
     })
 
     // update
     .put(function(req, res) {
-      Product.findOneAndUpdate({_id: req.params._id}, req.body.product, {new: true})
+      Product.findOneAndUpdate({_id: req.params.id}, req.body.product, {new: true})
         .then((product) => {
-          res.redirect(`/products/${product.title}`);
+          res.redirect(`/products/${product.id}`);
         })
         .catch((err) => { if(err) console.log(err); });
     })
 
     // destroy
     .delete(function(req, res) {
-      Product.findOneAndRemove({name: req.params.title})
-        .then((product) => { res.redirect('/products'); })
+      Product.findOneAndRemove({_id: req.params.id})
+        .then(() => { res.redirect('/products'); })
         .catch((err) => { if(err) console.log(err); });
     });
 
-    // register routes
+    // register routes =========================================
     app.use('/api', apiRouter);
 
 };
