@@ -36,12 +36,21 @@ module.exports = function(app) {
         .catch((err) => { if(err) console.log(err); });
     });
 
-  apiRouter.route('/products/:product_title')
+  apiRouter.route('/products/:title')
 
     // show
     .get(function(req, res) {
-      Product.findOne({title: req.params.product_title})
+      Product.findOne({title: req.params.title})
         .then((product) => { res.json(product); })
+        .catch((err) => { if(err) console.log(err); });
+    })
+
+    // update
+    .put(function(req, res) {
+      Product.findOneAndUpdate({title: req.params.title}, req.body.product, {new: true})
+        .then((product) => {
+          res.redirect(`/products/${product.title}`);
+        })
         .catch((err) => { if(err) console.log(err); });
     });
 
