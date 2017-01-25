@@ -63,5 +63,4 @@ module.exports = function(app) {
 
     // register routes
     app.use('/api', apiRouter);
-
 };
