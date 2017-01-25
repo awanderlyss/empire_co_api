@@ -1,8 +1,5 @@
 // modules =================================================
 var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-
-// variables ===============================================
 var Schema = mongoose.Schema;
 
 // create model ============================================
