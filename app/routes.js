@@ -1,10 +1,14 @@
 // modules =================================================
-var express   = require('express');
-var Product   = require('./models/product');// fetching the product model
-var apiRouter = express.Router();
+var express     = require('express');
+var Product     = require('./models/product');// fetching the product model
+var apiRouter   = express.Router();
+var loginRouter = express.Router();
 
-
+// expose routes
 module.exports = function(app) {
+
+// apiRouter routes =========================================
+
   // console logs when the api is being used
   apiRouter.use(function(req, res, next) {
     console.log("Something is happening");
@@ -16,7 +20,6 @@ module.exports = function(app) {
     res.json({ message: 'WELCOME TO THE EMPIRE CO API!' });
   });
 
-  // routes for api start here =============================
 
   // on routes that end in /products
   apiRouter.route('/products')
@@ -61,6 +64,13 @@ module.exports = function(app) {
         .then(() => { res.redirect('/products'); })
         .catch((err) => { if(err) console.log(err); });
     });
+// end of apiRouter routes =====================================
+
+// loginRouter routes ==========================================
+
+  
+
+// end of loginRouter routes ===================================
 
     // register routes =========================================
     app.use('/api', apiRouter);
