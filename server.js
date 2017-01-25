@@ -16,7 +16,7 @@ var methodOverride = require('method-override');
 // config ==================================================
 
 // connect to database
-require('./app/db/connection');
+require('./app/config/database');
 
 // pass passport for configuration
 // require('./config/passport')(passport);
@@ -30,7 +30,7 @@ app.use(methodOverride()); // simulate DELETE and PUT
 
 
 // required for passport
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(session({ secret: 'lap dog' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
