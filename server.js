@@ -10,7 +10,7 @@ var flash          = require('connect-flash');
 var morgan         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
-var session        = require('express-session');
+var session        = require('cookie-session');
 var methodOverride = require('method-override');
 
 // config ==================================================
@@ -19,7 +19,7 @@ var methodOverride = require('method-override');
 require('./app/config/database');
 
 // pass passport for configuration
-// require('./config/passport')(passport);
+require('./app/config/passport')(passport);
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console

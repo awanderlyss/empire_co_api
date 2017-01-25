@@ -70,10 +70,17 @@ module.exports = function(app, passport) {
   app.get('/login', function(req, res) {
     res.json({ message: req.flash('loginMessage') });
   });
+  
   // signup
+  app.post('/signup', passport.authenticate('local-signup', {
+      successRedirect : '/profile', // redirect to the secure profile section
+      failureRedirect : '/signup', // redirect back to the signup page if there is an error
+      failureFlash : true // allow flash messages
+  }));
+
   app.get('/signup', function(req, res) {
     res.json({ message: req.flash('signupMessage') });
-});
+  });
 
   // process the signup form
   // app.post('/signup', do all our passport stuff here);
