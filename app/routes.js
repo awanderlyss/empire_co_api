@@ -5,7 +5,7 @@ var apiRouter   = express.Router();
 var loginRouter = express.Router();
 
 // expose routes
-module.exports = function(app) {
+module.exports = function(app, passport) {
 
 // apiRouter routes =========================================
 
@@ -19,7 +19,6 @@ module.exports = function(app) {
   apiRouter.get('/', function(req, res) {
     res.json({ message: 'WELCOME TO THE EMPIRE CO API!' });
   });
-
 
   // on routes that end in /products
   apiRouter.route('/products')
@@ -68,7 +67,7 @@ module.exports = function(app) {
 
 // loginRouter routes ==========================================
 
-  
+
 
 // end of loginRouter routes ===================================
 
