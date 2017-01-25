@@ -7,10 +7,10 @@ var bodyParser     = require('body-parser');
 // config ==================================================
 var port = process.env.PORT || 8080; // set our port
 
-// connecting to mongodb
-mongoose.connect('mongodb://localhost/beer_api');
+// mongoose ================================================
+require('./app/db/connection');
 
-// configure app to use bodyParser()
+// middleware ==============================================
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

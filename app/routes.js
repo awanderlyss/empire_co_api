@@ -1,7 +1,7 @@
 // modules =================================================
 var express = require('express');
-var Product = require('./models/product');// fetching the product model
 
+var Product = require('./models/product');// fetching the product model
 
 var apiRouter     = express.Router();
 var welcomeRouter = express.Router();
@@ -47,7 +47,7 @@ module.exports = function(app) {
 
     // update
     .put(function(req, res) {
-      Product.findOneAndUpdate({title: req.params.title}, req.body.product, {new: true})
+      Product.findOneAndUpdate({_id: req.params._id}, req.body.product, {new: true})
         .then((product) => {
           res.redirect(`/products/${product.title}`);
         })
