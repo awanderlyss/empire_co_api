@@ -5,7 +5,7 @@ var User = require('../models/user');// fetching the user model
 // expose user route =======================================
 module.exports = function(app, passport) {
   // login
-  router.post('/login', function(req, res) {
+  router.post('/login', passport.authenticate('local'), function(req, res) {
     res.json({user: req.user});
   });
   // logout

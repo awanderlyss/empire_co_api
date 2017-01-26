@@ -7,11 +7,12 @@ module.exports = (app, passport) => {
   // on routes that end in /users
   router.route('/users')
     // register (create)
-    .post(function(req, res) {
+    .post(function(req, res, next) {
       var user = new User(req.body.user);
-      User.register(user, req.body.user.password)
-        .then((user) => { res.json(user); })
-        .catch((err) => { if(err) console.log(err); });
+      User.register(user, req.body.user.password, function(err, user) {
+        if(err) return next(err);
+        res.json(user);
+      });
     })
     // index
     .get(function(req, res) {

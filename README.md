@@ -53,3 +53,15 @@ Let people know how they can dive into the project, include important links to t
 ## License
 
 A short snippet describing the license (MIT, Apache, etc.)
+
+
+#NOTES
+
+### morgan
+https://github.com/expressjs/morgan
+
+dev
+
+Concise output colored by response status for development use. The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
+
+:method :url :status :response-time ms - :res[content-length]

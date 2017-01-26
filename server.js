@@ -2,9 +2,9 @@
 // get all tools needed
 var express        = require('express');
 var app            = express();
-var mongoose       = require('mongoose');
 var passport       = require('passport');
 
+var logger         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
 var session        = require('cookie-session');
@@ -17,8 +17,9 @@ var port = process.env.PORT || 8080; // set our port
 require('./db/connection');
 
 // set up our express application
+app.use(logger('dev')); // log
 app.use(cookieParser()); // read cookies (needed for auth)
-app.use(bodyParser.urlencoded({ extended: false })); // why true or false?
+app.use(bodyParser.urlencoded({ extended: true })); // why true or false?
 app.use(bodyParser.json());
 app.use(methodOverride()); // simulate DELETE and PUT
 
@@ -28,6 +29,19 @@ var User = require('./models/user');
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// Configure passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// https://github.com/expressjs/cookie-session#api
+app.use(session({
+  // https://devcenter.heroku.com/articles/heroku-local
+  secret: process.env.SESSION_SECRECT || 'lazydog',
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
+
 
 // routes
 require('./routes/auth')(app, passport);
