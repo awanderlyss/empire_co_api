@@ -39,7 +39,7 @@ module.exports = function(app) {
     // destroy
     .delete(function(req, res) {
       Product.findOneAndRemove({_id: req.params.id})
-        .then(() => { res.redirect('/products'); })
+        .then((user) => {  res.json({ message: 'Account Terminated!'}); })
         .catch((err) => { if(err) console.log(err); });
     });
     // register routes =========================================

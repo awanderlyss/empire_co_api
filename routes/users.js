@@ -37,7 +37,7 @@ module.exports = (app, passport) => {
     // destroy
     .delete(function(req, res) {
       User.findOneAndRemove({_id: req.params.id})
-        .then(() => { })
+        .then((user) => { res.json({ message: 'Account Terminated!' }); })
         .catch((err) => { if(err) console.log(err); });
     });
     // register routes =========================================
