@@ -42,7 +42,7 @@ module.exports = function(app) {
     .put(function(req, res) {
       Product.findOneAndUpdate({_id: req.params.id}, req.body.product, {new: true})
         .then((product) => {
-          res.redirect(`/products/${product.id}`);
+          res.json(product);
         })
         .catch((err) => { if(err) console.log(err); });
     })
