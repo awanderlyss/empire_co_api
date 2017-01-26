@@ -5,8 +5,8 @@ var passportLocalMongoose = require('passport-local-mongoose');
 var ProductSchema         = require('../models/product');
 // create model ============================================
 var UserSchema = new Schema({
-  firstname: { type: String, required: true },
-  lastname:  String,
+  firstName: { type: String, required: true },
+  lastName:  String,
   email:     { type: String, required: true },
   // ERROR: Undefined type `model` at array `products`
   //products:  [ProductSchema]
