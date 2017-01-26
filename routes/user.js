@@ -8,15 +8,23 @@ var User     = require('../models/user');// fetching the user model
 module.exports = (app, passport) => {
 
   router.route('/users')
-    //register
+    // register (create)
     .post(function(req, res) {
       var user = new User(req.body.user);
       User.register(user, req.body.user.password)
         .then((user) => { res.json(user); })
         .catch((err) => { if(err) console.log(err); });
+    })
+
+    // index
+    .get(function(req, res) {
+      Product.find({})
+        .then((users) => { res.json(users); })
+        .catch((err) => { if(err) console.log(err); });
     });
 
-  app.use('/api', router);
 
+    // register routes =========================================
+    app.use('/api', router);
 
 };
