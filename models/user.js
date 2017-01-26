@@ -8,7 +8,8 @@ var UserSchema = new Schema({
   firstname: { type: String, required: true },
   lastname:  String,
   email:     { type: String, required: true },
-  products:  [ProductSchema]
+  // ERROR: Undefined type `model` at array `products`
+  //products:  [ProductSchema]
 });
 // https://github.com/saintedlama/passport-local-mongoose
 // set option usernameField to equal user email
