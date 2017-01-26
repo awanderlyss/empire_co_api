@@ -4,6 +4,7 @@ var express        = require('express');
 var app            = express();
 var passport       = require('passport');
 
+var cors           = require('cors');
 var logger         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
@@ -17,6 +18,7 @@ var port = process.env.PORT || 8080; // set our port
 require('./db/connection');
 
 // set up our express application
+app.use(cors());
 app.use(logger('dev')); // log
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.urlencoded({ extended: true })); // why true or false?
