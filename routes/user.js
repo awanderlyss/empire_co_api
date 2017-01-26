@@ -20,28 +20,27 @@ module.exports = (app, passport) => {
         .then((users) => { res.json(users); })
         .catch((err) => { if(err) console.log(err); });
     });
-    // on routes that end in /users/:title
-    router.route('/users/:id')
-      // show
-      .get(function(req, res) {
-        User.findById(req.params.id)
-          .then((user) => { res.json(user); })
-          .catch((err) => { if(err) console.log(err); });
-      })
-      // update
-      .put(function(req, res) {
-        Product.findOneAndUpdate({_id: req.params.id}, req.body.user, {new: true})
-          .then((user) => {
-            res.json(user);
-          })
-          .catch((err) => { if(err) console.log(err); });
-      })
-      // destroy
-      .delete(function(req, res) {
-        Product.findOneAndRemove({_id: req.params.id})
-          .then(() => { })
-          .catch((err) => { if(err) console.log(err); });
-      });
+  // on routes that end in /users/:title
+  router.route('/users/:id')
+    // show
+    .get(function(req, res) {
+      User.findById(req.params.id)
+        .then((user) => { res.json(user); })
+        .catch((err) => { if(err) console.log(err); });
+    })
+    // update
+    .put(function(req, res) {
+      Product.findOneAndUpdate({_id: req.params.id}, req.body.user, {new: true})
+        .then((user) => { res.json(user); })
+        .catch((err) => { if(err) console.log(err); });
+    })
+    // destroy
+    .delete(function(req, res) {
+      Product.findOneAndRemove({_id: req.params.id})
+        .then(() => { })
+        .catch((err) => { if(err) console.log(err); });
+    });
+
     // register routes =========================================
     app.use('/api', router);
 };
