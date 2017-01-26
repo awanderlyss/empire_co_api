@@ -29,13 +29,13 @@ module.exports = (app, passport) => {
     })
     // update
     .put(function(req, res) {
-      Product.findOneAndUpdate({_id: req.params.id}, req.body.user, {new: true})
+      User.findOneAndUpdate({_id: req.params.id}, req.body.user, {new: true})
         .then((user) => { res.json(user); })
         .catch((err) => { if(err) console.log(err); });
     })
     // destroy
     .delete(function(req, res) {
-      Product.findOneAndRemove({_id: req.params.id})
+      User.findOneAndRemove({_id: req.params.id})
         .then(() => { })
         .catch((err) => { if(err) console.log(err); });
     });
