@@ -31,7 +31,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // routes
 require('./routes/product')(app);
-require('./routes/user')(app, passport);
+require('./routes/auth')(app, passport);
 
 // start app ===============================================
 app.listen(port, () => {
