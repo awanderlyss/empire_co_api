@@ -36,6 +36,12 @@ module.exports = (app, passport) => {
           })
           .catch((err) => { if(err) console.log(err); });
       })
+      // destroy
+      .delete(function(req, res) {
+        Product.findOneAndRemove({_id: req.params.id})
+          .then(() => { })
+          .catch((err) => { if(err) console.log(err); });
+      });
     // register routes =========================================
     app.use('/api', router);
 };
