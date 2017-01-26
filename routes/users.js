@@ -1,6 +1,5 @@
 // modules =================================================
 var express  = require('express');
-var passport = require('passport');
 var router   = express.Router();
 var User     = require('../models/user');// fetching the user model
 // expose user route =======================================
@@ -40,7 +39,6 @@ module.exports = (app, passport) => {
         .then(() => { })
         .catch((err) => { if(err) console.log(err); });
     });
-
     // register routes =========================================
     app.use('/api', router);
 };
