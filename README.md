@@ -2,7 +2,7 @@
 ___
 <h1 align="center">EMPIRE CO API (back-end)</h1>
 
-<p align="center">This api is built using [MongoDB][mongodb-ref], [Express][express-ref], and [Node.js][nodejs-ref].</p>
+This api is built using [MongoDB][mongodb-ref], [Express][express-ref], and [Node.js][nodejs-ref].
 
 back-end deployed @ https://empire-co.herokuapp.com/api
 
