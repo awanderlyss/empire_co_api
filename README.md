@@ -1,4 +1,4 @@
-![Header Logo][header-logo]
+<div align="center">![Header Logo][header-logo]</div>
 ___
 <h1 align="center">EMPIRE CO API (back-end)</h1>
 
