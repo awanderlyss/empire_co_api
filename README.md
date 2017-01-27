@@ -9,13 +9,9 @@ back-end deployed @ https://empire-co.herokuapp.com/api
 For a UI experience that consumes our api check out [EmpireCo][front-end], which uses [AngularJS][angular-ref] as a front-end JavaScript framework.
 
 
-## Synopsis
-
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Empire Co. was created because of shared our interest in developing the necassary skills required to create a modern web store. These skills can potentially open us to strategic roles with client retailers both large and independent.
 
 ## Development / Installation setup
 
