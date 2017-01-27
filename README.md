@@ -26,40 +26,27 @@ A short description of the motivation behind the creation and maintenance of the
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-## Installation
+
+## Development / Installation setup
+
+![Node Logo][node-logo] 
+The following commands are assuming you already have node installed on your machine. If you dont you can download Node.js [here][nodejs].
 
 OS X & Linux:
 
 ```sh
-# install all the node dependencies
-npm install
-
-
+# install app dependencies
+$ npm install
 ```
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
 ```sh
-make install
-npm test
+# create database and seed locally
+$ node db/seed.js
 ```
-
-
-## Contributors
-
-Feel free to refactor, update, or add new features. Have any questions, ask one of the contributors below!
-
-| Clifton Hutchins | Dara Hoy | Alyssa Felix |
-| ================ | ======== | ============ |
-| ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
-| [cliftonh02](https://github.com/cliftonh02) | [DaraHoy](https://github.com/DaraHoy) | [awanderlyss](https://github.com/awanderlyss) |
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
-
+```sh
+# start server
+$ nodemon
+```
+If there are no errors in the terminal, we can now navigate in our browser to: http://localhost:8080/api to interact with our app.
 
 #NOTES
 
@@ -71,3 +58,20 @@ dev
 Concise output colored by response status for development use. The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
 
 :method :url :status :response-time ms - :res[content-length]
+
+
+## Contributors
+
+Feel free to refactor, update, or add new features. Have any questions, ask one of the contributors below!
+
+| Clifton Hutchins | Dara Hoy | Alyssa Felix |
+|:----------------:|:--------:|:------------:|
+| ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
+| [cliftonh02](https://github.com/cliftonh02) | [DaraHoy](https://github.com/DaraHoy) | [awanderlyss](https://github.com/awanderlyss) |
+
+## License
+
+A short snippet describing the license (MIT, Apache, etc.)
+
+[node-logo]: https://tastydigital.com/wp-content/themes/tastydigital/assets/images/tools/NodeJS.png
+[nodejs]: https://nodejs.org/en/download/package-manager/#osx
