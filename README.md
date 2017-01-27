@@ -1,35 +1,21 @@
+![Header Logo][header-logo]
+___
 <h1 align="center">EMPIRE CO API (back-end)</h1>
-
-
-
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+
 
 ## Synopsis
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
 ## Motivation
 
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-
 ## Development / Installation setup
 
-![Node Logo][node-logo]
 The following commands are assuming you already have node installed on your machine. If you dont you can download Node.js [here][nodejs].
 
 OS X & Linux:
@@ -59,6 +45,20 @@ Concise output colored by response status for development use. The :status token
 
 :method :url :status :response-time ms - :res[content-length]
 
+## Useage
+
+Here is documentation on accessing our api.
+
+| URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **Method(s)** | GET | POST | POST | GET POST | GET PUT DELETE | GET POST | GET PUT DELETE |
+| **Success Response** | | | | | | | |
+| **Error Response** | | | | | | | | |
+
+## Code Example
+
+Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
 
 ## Contributors
 
@@ -69,9 +69,7 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 | ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
 | [cliftonh02](https://github.com/cliftonh02) | [DaraHoy](https://github.com/DaraHoy) | [awanderlyss](https://github.com/awanderlyss) |
 
-## License
 
-A short snippet describing the license (MIT, Apache, etc.)
 
-[node-logo]: https://tastydigital.com/wp-content/themes/tastydigital/assets/images/tools/NodeJS.png
+[header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
 [nodejs]: https://nodejs.org/en/download/package-manager/#osx
