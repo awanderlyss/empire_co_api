@@ -6,7 +6,7 @@ This api is built using [MongoDB][mongodb-ref], [Express][express-ref], and [Nod
 
 back-end deployed @ https://empire-co.herokuapp.com/api
 
-For a UI experience that consumes our api check out [EmpireCo][front-end], which uses [AngularJS][angular-ref] as a front-end JavaScript framework.
+For a UI experience that consumes our api check out [EmpireCo App][front-end-app], which uses [AngularJS][angular-ref] as a front-end JavaScript framework. Also, you can checkout the Github [here][front-end-repo].
 
 
 ## Motivation
@@ -133,7 +133,8 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 [angular-ref]: https://angularjs.org/
 [cookie-session-ref]: https://github.com/expressjs/cookie-session
 [express-ref]: https://expressjs.com/
-[front-end]: https://cliftonh02.github.io/empire_co_angular/
+[front-end-app]: https://cliftonh02.github.io/empire_co_angular/
+[front-end-repo]: https://github.com/cliftonh02/empire_co_angular
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
 [header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
 [img-erd-ref]: /screenshots/erd.png
