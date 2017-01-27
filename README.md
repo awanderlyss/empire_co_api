@@ -87,11 +87,11 @@ $ node db/seed.js
 # start server
 $ nodemon
 ```
-If there are no errors in the terminal, you can now navigate in our browser to: http://localhost:8080/api to interact with our app.
+If there are no errors in the terminal, you can now navigate in our browser to <http://localhost:8080/api> to interact with our app.
 
 ## Useage
 
-Here is documentation on accessing our api. If you would like to use all the RESTful routes you can download [Postman][postman-ref].
+Here is documentation on accessing our api. If you would like to test all the RESTful routes you can download [Postman][postman-ref], an powerfull HTTP client.
 
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -125,4 +125,4 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 [nodejs-ref]: https://nodejs.org/en/
 [node.js-blog]: https://blog.xervo.io/absolute-beginners-guide-to-nodejs
 [passport-local-mongoose]: https://github.com/saintedlama/passport-local-mongoose
-[postman-ef]:
+[postman-ef]: https://www.getpostman.com/
