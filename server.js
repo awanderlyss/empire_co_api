@@ -29,6 +29,7 @@ app.use(methodOverride()); // simulate DELETE and PUT
 // https://github.com/saintedlama/passport-local-mongoose
 var User = require('./models/user');
 passport.use(User.createStrategy());
+//http://stackoverflow.com/questions/27637609/understanding-passport-serialize-deserialize
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -43,9 +44,16 @@ app.use(session({
 }));
 
 // routes
+// test route (welcome message)
+var router = express.Router();
+router.get('/', function(req, res) {
+  res.json({ message: 'WELCOME TO THE EMPIRE CO API!' });
+});
 require('./routes/auth')(app, passport);
 require('./routes/products')(app);
 require('./routes/users')(app, passport);
+// register (welcome) route
+app.use('/api', router);
 
 // start app ===============================================
 app.listen(port, () => {

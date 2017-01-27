@@ -4,10 +4,6 @@ var router  = express.Router();
 var Product = require('../models/product');// fetching the product model
 // expose product routes ===================================
 module.exports = function(app) {
-  // test route to make sure everything is working
-  router.get('/', function(req, res) {
-    res.json({ message: 'WELCOME TO THE EMPIRE CO API!' });
-  });
   // on routes that end in /products
   router.route('/products')
     // create
