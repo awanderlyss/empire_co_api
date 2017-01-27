@@ -1,5 +1,5 @@
-EMPIRE CO API (back-end)
-========================
+<h1 align="center">EMPIRE CO API (back-end)</h1>
+
 
 
 [![NPM Version][npm-image]][npm-url]
@@ -29,7 +29,7 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 ## Development / Installation setup
 
-![Node Logo][node-logo] 
+![Node Logo][node-logo]
 The following commands are assuming you already have node installed on your machine. If you dont you can download Node.js [here][nodejs].
 
 OS X & Linux:
