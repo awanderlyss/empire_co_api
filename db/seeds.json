@@ -10,5 +10,53 @@
     "description": "It's new.",
     "img_url": "https://www.metropolis-collectibles.com/images/xhot902536.jpg",
     "price": 990
+  },
+  {
+    "title":"Storm Trooper 1",
+    "description":"Complete Storm Trooper gear. Includes gun holster.",
+    "img_url":"https://goo.gl/images/17w5nO",
+    "price": 99
+  },
+  {
+    "title":"Scout Trooper",
+    "description":"Complete Scout Trooper gear. Includes leg gun holster ",
+    "img_url":"https://goo.gl/images/2IK9CR",
+    "price": 100
+  },
+  {
+    "title":"Storm Trooper Chest plate",
+    "description":"Chest plate for Storm Trooper.",
+    "img_url":"https://goo.gl/images/mmN93f",
+    "price": 200
+  },
+  {
+    "title":"Blacktrooper",
+    "description":"Complete Black Trooper gear.",
+    "img_url":"https://goo.gl/images/gTqDxK",
+    "price": 300
+  },
+  {
+    "title":"Blaster",
+    "description":"Blaster Pistol",
+    "img_url":"https://goo.gl/images/IOoNmA",
+    "price": 50
+  },
+  {
+    "title":"Blaster 2",
+    "description":"Storm Trooper Blaster",
+    "img_url":"https://goo.gl/images/DypMZi",
+    "price": 60
+  },
+  {
+    "title":"Winter Trooper",
+    "description":"Storm Trooper Winter edition.",
+    "img_url":"https://goo.gl/images/tFOm2u",
+    "price": 70
+  },
+  {
+    "title":"Captain Stormtrooper",
+    "description":"Complete Metalic Storm Trooper Capatain gear.",
+    "img_url":"https://goo.gl/images/rJBD7S",
+    "price": 500
   }
 ]
