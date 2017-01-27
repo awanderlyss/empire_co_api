@@ -87,16 +87,16 @@ $ node db/seed.js
 # start server
 $ nodemon
 ```
-If there are no errors in the terminal, you can now navigate in our browser to: http://localhost:8080/api to interact with our app.
+If there are no errors in the terminal, you can now navigate in our browser to <http://localhost:8080/api> to interact with our app.
 
 ## Useage
 
-Here is documentation on accessing our api. If you would like to use all the RESTful routes you can download [Postman][postman-ref].
+Here is documentation on accessing our api. If you would like to test all the RESTful routes you can download [Postman][postman-ref], an powerfull HTTP client.
 
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
-| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: 200<br> Content: { firstName: Alyssa, lastName: Felix, email: 'afelix@abc.com'  } | | | | | | |
+| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: (200)<br> Content: { user: (all key:pair from user model and passport)} | Code: (200)<br> Content: { message: "Logged Out!, "user": null } | `GET` Code: (200)<br> Content: [products]<br> `POST` Code: (200)<br> Content: [product] |  | | | |
 | **Error Response** | | | | | | | | |
 
 ## Code Example
@@ -125,4 +125,4 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 [nodejs-ref]: https://nodejs.org/en/
 [node.js-blog]: https://blog.xervo.io/absolute-beginners-guide-to-nodejs
 [passport-local-mongoose]: https://github.com/saintedlama/passport-local-mongoose
-[postman-ef]:
+[postman-ef]: https://www.getpostman.com/
