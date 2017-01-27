@@ -96,12 +96,7 @@ Here is documentation on accessing our api. If you would like to use all the RES
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
-| **Success Response** |for the path '/’  success would be
-Code: 200
-Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | for the path '/login’  success would be
-Code: 200
-Content: { 'Alyssa Felix afelix@abc.com'  } | | | | | |
-
+| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: 200<br> Content: { firstName: Alyssa, lastName: Felix, email: 'afelix@abc.com'  } | | | | | | |
 | **Error Response** | | | | | | | | |
 
 ## Code Example
