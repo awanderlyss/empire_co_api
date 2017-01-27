@@ -37,7 +37,9 @@ passport.deserializeUser(User.deserializeUser());
 app.use(passport.initialize());
 app.use(passport.session());
 
+// https://github.com/expressjs/cookie-session
 app.use(session({
+  name: 'session',
   secret: process.env.SESSION_SECRECT || 'lazydog',
   // Cookie Options
   maxAge: 24 * 60 * 60 * 1000 // 24 hours

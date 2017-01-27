@@ -6,7 +6,7 @@ ___
 
 back-end deployed @ https://empire-co.herokuapp.com/api
 
-For a UI experience that consumes our api check [this][front-end] out.
+For a UI experience that consumes our api check out [EmpireCo][front-end], which uses [AngularJS][angular-ref] as a front-end JavaScript framework.
 
 
 ## Synopsis
@@ -35,18 +35,27 @@ ___
 
 <details>
   <summary>
+    [cookie-session][cookie-session-ref]
+  </summary>
+  ```js
+
+  ```
+</details>
+
+<details>
+  <summary>
     [morgan][morgan-ref]
   </summary>
   <br>
   ```js
-  var logger = require('morgan');
-  app.use(logger('dev'));
+    var logger = require('morgan');
+    app.use(logger('dev'));
 
-  //Concise output colored by response status for development use. The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
+    //Concise output colored by response status for development use. The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
 
-  // CONSOLE.LOG: :method :url :status :response-time ms - :res[content-length]
+    // CONSOLE.LOG: :method :url :status :response-time ms - :res[content-length]
 
-  // EXAMPLE: GET /api 200 6.823 ms - 43
+    // EXAMPLE: GET /api 200 6.823 ms - 43
   ```
 </details>
 <details>
@@ -55,11 +64,11 @@ ___
   </summary>
   <br>
   ```js
-  var passportLocalMongoose = require('passport-local-mongoose');
-  UserSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
+    var passportLocalMongoose = require('passport-local-mongoose');
+    UserSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 
-  // Plugin Passport-Local Mongoose into your User schema
-  // Use options to specify an alternative usernameField
+    // Plugin Passport-Local Mongoose into your User schema
+    // Use options to specify an alternative usernameField
   ```
 </details>
 
@@ -82,7 +91,7 @@ If there are no errors in the terminal, you can now navigate in our browser to: 
 
 ## Useage
 
-Here is documentation on accessing our api.
+Here is documentation on accessing our api. If you would like to use all the RESTful routes you can download [Postman][postman-ref].
 
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -109,8 +118,10 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 | ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
 | ![][github-logo]  [cliftonh02](https://github.com/cliftonh02) | ![][github-logo]  [DaraHoy](https://github.com/DaraHoy) | ![][github-logo] [awanderlyss](https://github.com/awanderlyss) |
 
+[angular-ref]: https://angularjs.org/
+[cookie-session]: https://github.com/expressjs/cookie-session
 [express-ref]: https://expressjs.com/
-[front-end]:
+[front-end]: https://cliftonh02.github.io/empire_co_angular/
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
 [header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
 [mongodb-ref]: https://www.mongodb.com/
@@ -119,3 +130,4 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 [nodejs-ref]: https://nodejs.org/en/
 [node.js-blog]: https://blog.xervo.io/absolute-beginners-guide-to-nodejs
 [passport-local-mongoose]: https://github.com/saintedlama/passport-local-mongoose
+[postman-ef]:
