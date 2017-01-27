@@ -2,7 +2,11 @@
 ___
 <h1 align="center">EMPIRE CO API (back-end)</h1>
 
-One to two paragraph statement about your product and what it does.
+<p align="center">This api is built using [MongoDB][mongodb-ref], [Express][express-ref], and [Node.js][nodejs-ref].</p>
+
+back-end deployed @ https://empire-co.herokuapp.com/api
+
+For a UI experience that consumes our api check [this][front-end] out.
 
 
 ## Synopsis
@@ -17,11 +21,21 @@ A short description of the motivation behind the creation and maintenance of the
 
 The following commands are assuming you already have node installed on your machine. If you dont you can download Node.js [here][nodejs].
 
-Some dependencies used in the api and what they are being used for in the app.
+<details>
+<summary>
+  [node.js][node.js-blog]
+</summary>
+```
+An important thing to realize is that Node is not a webserver. By itself it doesn't do anything. It doesn't work like Apache. There is no config file where you point it to you HTML files. If you want it to be a HTTP server, you have to write an HTTP server (with the help of its built-in libraries). Node.js is just another way to execute code on your computer. It is simply a JavaScript runtime.
+```
+</details>
+
+___
+<p>Some dependencies used in the api and what they are being used for in the app.</p>
 
 <details>
   <summary>
-    [morgan]
+    [morgan][morgan-ref]
   </summary>
   <br>
   ```js
@@ -49,7 +63,7 @@ Some dependencies used in the api and what they are being used for in the app.
   ```
 </details>
 
----
+___
 OS X & Linux:
 
 ```sh
@@ -64,7 +78,7 @@ $ node db/seed.js
 # start server
 $ nodemon
 ```
-If there are no errors in the terminal, we can now navigate in our browser to: http://localhost:8080/api to interact with our app.
+If there are no errors in the terminal, you can now navigate in our browser to: http://localhost:8080/api to interact with our app.
 
 ## Useage
 
@@ -90,9 +104,13 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 | ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
 | ![][github-logo]  [cliftonh02](https://github.com/cliftonh02) | ![][github-logo]  [DaraHoy](https://github.com/DaraHoy) | ![][github-logo] [awanderlyss](https://github.com/awanderlyss) |
 
-
+[express-ref]: https://expressjs.com/
+[front-end]: 
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
 [header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
-[morgan]: https://github.com/expressjs/morgan
+[mongodb-ref]: https://www.mongodb.com/
+[morgan-ref]: https://github.com/expressjs/morgan
 [nodejs]: https://nodejs.org/en/download/package-manager/#osx
+[nodejs-ref]: https://nodejs.org/en/
+[node.js-blog]: https://blog.xervo.io/absolute-beginners-guide-to-nodejs
 [passport-local-mongoose]: https://github.com/saintedlama/passport-local-mongoose
