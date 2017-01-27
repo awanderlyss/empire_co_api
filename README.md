@@ -87,7 +87,10 @@ Here is documentation on accessing our api.
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
-| **Success Response** | | | | | | | |
+| **Success Response** |for the path '/’  success would be
+Code: 200
+Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | | | | | | |
+
 | **Error Response** | | | | | | | | |
 
 ## Code Example
@@ -105,7 +108,7 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 | ![][github-logo]  [cliftonh02](https://github.com/cliftonh02) | ![][github-logo]  [DaraHoy](https://github.com/DaraHoy) | ![][github-logo] [awanderlyss](https://github.com/awanderlyss) |
 
 [express-ref]: https://expressjs.com/
-[front-end]: 
+[front-end]:
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
 [header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
 [mongodb-ref]: https://www.mongodb.com/

@@ -55,6 +55,7 @@ require('./routes/users')(app, passport);
 // register (welcome) route
 app.use('/api', router);
 
+
 // start app ===============================================
 app.listen(port, () => {
   console.log(`Magic happens on port ${port}`);
