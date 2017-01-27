@@ -36,14 +36,11 @@ passport.deserializeUser(User.deserializeUser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// https://github.com/expressjs/cookie-session#api
 app.use(session({
-  // https://devcenter.heroku.com/articles/heroku-local
   secret: process.env.SESSION_SECRECT || 'lazydog',
   // Cookie Options
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }));
-
 
 // routes
 require('./routes/auth')(app, passport);

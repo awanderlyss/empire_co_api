@@ -1,5 +1,6 @@
-# EMPIRE CO API (back-end)
-Using the MEN in MEAN stack
+EMPIRE CO API (back-end)
+========================
+
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -30,7 +31,10 @@ A few motivating and useful examples of how your product can be used. Spice this
 OS X & Linux:
 
 ```sh
-npm install my-crazy-module --save
+# install all the node dependencies
+npm install
+
+
 ```
 
 ## Development setup
@@ -42,13 +46,15 @@ make install
 npm test
 ```
 
-## Tests
-
-Describe and show how to run the tests with code examples.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Feel free to refactor, update, or add new features. Have any questions, ask one of the contributors below!
+
+| Clifton Hutchins | Dara Hoy | Alyssa Felix |
+| ================ | ======== | ============ |
+| ![Cliff](https://avatars3.githubusercontent.com/u/22736325?v=3&s=100) | ![Dara](https://avatars1.githubusercontent.com/u/23284333?v=3&s=100) | ![Alyssa](https://avatars0.githubusercontent.com/u/22528201?v=3&s=100)
+| [cliftonh02](https://github.com/cliftonh02) | [DaraHoy](https://github.com/DaraHoy) | [awanderlyss](https://github.com/awanderlyss) |
 
 ## License
 
