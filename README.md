@@ -1,6 +1,6 @@
 ![Header Logo][header-logo]
 ___
-<h1 align="center">EMPIRE CO API (back-end)</h1>
+# EMPIRE CO API (back-end)
 
 This api is built using [MongoDB][mongodb-ref], [Express][express-ref], and [Node.js][nodejs-ref].
 
