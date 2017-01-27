@@ -89,7 +89,9 @@ Here is documentation on accessing our api.
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
 | **Success Response** |for the path '/’  success would be
 Code: 200
-Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | | | | | | |
+Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | for the path '/login’  success would be
+Code: 200
+Content: { 'Alyssa Felix afelix@abc.com'  } | | | | | |
 
 | **Error Response** | | | | | | | | |
 
