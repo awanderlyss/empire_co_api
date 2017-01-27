@@ -13,13 +13,18 @@ For a UI experience that consumes our api check out [EmpireCo][front-end], which
 
 Empire Co. was created because of shared our interest in developing the necassary skills required to create a modern web store. These skills can potentially open us to strategic roles with client retailers both large and independent.
 
+## Model Schema
+
+![erd image][img-erd-ref]
+
+
 ## Development / Installation setup
 
 The following commands are assuming you already have node installed on your machine. If you dont you can download Node.js [here][nodejs].
 
 <details>
 <summary>
-  [node.js][node.js-blog]
+  [node.js][node.js-blog] blog blurb.
 </summary>
 ```
 An important thing to realize is that Node is not a webserver. By itself it doesn't do anything. It doesn't work like Apache. There is no config file where you point it to you HTML files. If you want it to be a HTTP server, you have to write an HTTP server (with the help of its built-in libraries). Node.js is just another way to execute code on your computer. It is simply a JavaScript runtime.
@@ -44,6 +49,7 @@ ___
   </summary>
   <br>
   ```js
+    // server.js
     var logger = require('morgan');
     app.use(logger('dev'));
 
@@ -60,6 +66,7 @@ ___
   </summary>
   <br>
   ```js
+    // models/user.js
     var passportLocalMongoose = require('passport-local-mongoose');
     UserSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 
@@ -129,6 +136,7 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 [front-end]: https://cliftonh02.github.io/empire_co_angular/
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
 [header-logo]: http://ee-emma.s3.amazonaws.com/ee-product-images/68861/swse_header.png
+[img-erd-ref]: /screenshots/erd.png
 [mongodb-ref]: https://www.mongodb.com/
 [morgan-ref]: https://github.com/expressjs/morgan
 [nodejs]: https://nodejs.org/en/download/package-manager/#osx
