@@ -96,7 +96,7 @@ Here is documentation on accessing our api. If you would like to test all the RE
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
-| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: 200<br> Content: { firstName: Alyssa, lastName: Felix, email: 'afelix@abc.com'  } | | | | | | |
+| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: (200)<br> Content: { user: (all key:pair from user model and passport)} | Code: (200)<br> Content: { message: "Logged Out!, "user": null } | `GET` Code: (200)<br> Content: [products]<br> `POST` Code: (200)<br> Content: [product] |  | | | |
 | **Error Response** | | | | | | | | |
 
 ## Code Example
