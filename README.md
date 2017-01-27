@@ -34,7 +34,7 @@ ___
     [cookie-session][cookie-session-ref]
   </summary>
   ```js
-
+    Confusion...
   ```
 </details>
 
@@ -92,12 +92,26 @@ Here is documentation on accessing our api. If you would like to test all the RE
 | URL(s) | / | /login | /logout | /products | /products/:id | /users | /users/:id |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Method(s)** | `GET` | `POST` | `POST` | `GET` `POST` | `GET` `PUT` `DELETE` | `GET` `POST` | `GET` `PUT` `DELETE` |
-| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: (200)<br> Content: { user: (all key:pair from user model and passport)} | Code: (200)<br> Content: { message: "Logged Out!, "user": null } | `GET` Code: (200)<br> Content: [products]<br> `POST` Code: (200)<br> Content: [product] |  | | | |
+| **Success Response** | Code: (200)<br> Content: { message: 'WELCOME TO THE EMPIRE CO API!' } | Code: (200)<br> Content: { user: (all key:pair from user model and passport)} | Code: (200)<br> Content: { message: "Logged Out!, "user": null } | `GET` Code: (200)<br> Content: [products]<br> `POST` Code: (200)<br> Content: [product] |  | | |
 | **Error Response** | | | | | | | | |
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Using .register instead of .create when creating a new instance of a user. This section of code gave us some trouble because we didnt realize that the register method tasks a callback as an argument. We were using a .then and .catch
+
+```js
+router.route('/users')
+  // register (create)
+  .post(function(req, res, next) {
+    var user = new User(req.body.user);
+    // register(user, password, cb) Convenience method to register a new user instance with a given password. Checks if username is unique.
+    User.register(user, req.body.user.password, function(err, user) {
+      // If the current middleware func does not end the request-response cycle, it must call next() to pass control to the next middleware function.
+      if(err) return next(err);
+      res.json(user);
+    });
+  })
+```
 
 
 ## Contributors
@@ -110,7 +124,7 @@ Feel free to refactor, update, or add new features. Have any questions, ask one 
 | ![][github-logo]  [cliftonh02](https://github.com/cliftonh02) | ![][github-logo]  [DaraHoy](https://github.com/DaraHoy) | ![][github-logo] [awanderlyss](https://github.com/awanderlyss) |
 
 [angular-ref]: https://angularjs.org/
-[cookie-session]: https://github.com/expressjs/cookie-session
+[cookie-session-ref]: https://github.com/expressjs/cookie-session
 [express-ref]: https://expressjs.com/
 [front-end]: https://cliftonh02.github.io/empire_co_angular/
 [github-logo]: http://cdn.shopify.com/s/files/1/0051/4802/t/72/assets/favicon.ico?1744047789295863037
